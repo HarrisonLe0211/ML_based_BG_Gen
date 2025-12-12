@@ -1,0 +1,39 @@
+nohup: ignoring input
+2025-12-12 02:09:17.388005: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-12-12 02:09:17.455940: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-12-12 02:09:19.714294: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+/workspaces/ML_based_BG_Gen/backend/main.py:110: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [50246]
+INFO:     Waiting for application startup.
+2025-12-12 02:09:23.450048: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+2025-12-12 02:09:23.519909: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:84] Allocation of 93763584 exceeds 10% of free system memory.
+2025-12-12 02:09:24.028499: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:84] Allocation of 93763584 exceeds 10% of free system memory.
+2025-12-12 02:09:24.079075: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:84] Allocation of 93763584 exceeds 10% of free system memory.
+/usr/local/python/3.12.1/lib/python3.12/site-packages/transformers/generation/tf_utils.py:465: UserWarning: `seed_generator` is deprecated and will be removed in a future version.
+  warnings.warn("`seed_generator` is deprecated and will be removed in a future version.", UserWarning)
+2025-12-12 02:09:42.886444: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:84] Allocation of 93763584 exceeds 10% of free system memory.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+Loading model...
+✓ Model loaded from /workspaces/ML_based_BG_Gen/model_training/distilbert_genre_classifier.keras
+Loading tokenizer...
+Tokenizer 'distilbert-base-uncased' loaded
+Loading Spotify data...
+Spotify data loaded: 114000 rows
+Loading Freesound predictions...
+Freesound data loaded: 94000 rows
+Loaded 114 genres
+INFO:     127.0.0.1:58834 - "POST /predict HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50246]
